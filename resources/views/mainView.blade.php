@@ -2,6 +2,7 @@
 <!doctype html>
 <html>
 <head>
+    <link href="css/button.css" rel="stylesheet" >
     <title>TOP 1 REZI</title>
     <meta name="description" content="Rezi">
 </head>
@@ -19,12 +20,13 @@
 
     function topFunc(inp){
         var youtop_div = document.getElementById("youtop");
+        var found=false;
         if (!inp){
             alert('empty form');
         }
-        var found=false;
+
         //console.log(table);
-        if (isNumeric(inp)){
+        else if (isNumeric(inp)){
             for (let i = 0; i < table.length; i++) {
                 if (table[i]['studentCardNumber']==inp){
                     youtop_div.innerHTML='ТЫ ТОП '+(i+1)+' РЭЗИ';
@@ -37,7 +39,7 @@
                 alert('СТУДЕНТ НЕ НАЙДЕН');
             }
         }
-        if (!isNumeric(inp)){
+        else if (!isNumeric(inp)){
             for (let i = 0; i < table.length; i++) {
                 var sudentSurname=surnames[table[i]['studentCardNumber']];
                 if (inp==sudentSurname){
@@ -60,6 +62,7 @@
 <form name="who">
     <input type="text" name="key"></input>
     <input type="button" id="Button" name="send" value="Отправить" onclick="topFunc(document.who.key.value)">
+    <button class="button-49" role="button" onclick="topFunc(document.who.key.value)">УЗНАТЬ</button>
 </form>
 
 <br><br>
