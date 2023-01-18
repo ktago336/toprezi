@@ -68,7 +68,7 @@ class GetTopController extends Controller
             '14130029'=>'Даниил Хочется',
             '14130030'=>'Маша Чурилова');
 
-        echo 'hello';
+
         $json = file_get_contents('https://iis.bsuir.by/api/v1/rating?year=2021&sdef=20028');
         $obj = json_decode($json, true);
         //var_dump($obj[0]);

@@ -5,9 +5,10 @@
     <link href="css/button.css" rel="stylesheet" >
     <title>TOP 1 REZI</title>
     <meta name="description" content="Rezi">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
 </head>
 <body>
-СЕЙЧАС ТОП 1 РЭЗИ ЭТО: {{$topOneRezi}}
+<h1 style="font-size:9vw;" align="center">СЕЙЧАС ТОП 1 РЭЗИ ЭТО: <div style="font-size:9vw;" class="rainbow-animated">{{$topOneRezi}}</div></h1>
 
 <script>
     function isNumeric(num){
@@ -60,12 +61,19 @@
     }
 </script>
 
-
-<br>Номер студака или фамилия
 <form name="who">
-    <input type="text" name="key"></input>
-    <input class="button-49" type="button" id="Button" name="send" value="Отправить" onclick="topFunc(document.who.key.value)">
-</form>
+
+    <div class="page">
+        <div class="field field_v1">
+            <label for="first-name" class="ha-screen-reader">Ваша фамилия или номер студака</label>
+            <input id="first-name" class="field__input" placeholder="e.g. Арцименя или 14130030", type="text", name="key"></input>
+            <span class="field__label-wrap" aria-hidden="true">
+      <span class="field__label">Ваша фамилия или номер студака</span>
+    </span>
+
+        </div>
+    </div>
+    <input class="button-46" type="button" id="Button" name="send" value="УЗНАТЬ ТОП СКОЛЬКО РЭЗИ ТЫ" onclick="topFunc(document.who.key.value)">
 
 <br><br>
 <div id="youtop"></div>
