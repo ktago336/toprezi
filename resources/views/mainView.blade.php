@@ -19,6 +19,9 @@
 
 
     function topFunc(inp){
+
+        inp=inp.trim();
+
         var youtop_div = document.getElementById("youtop");
         var found=false;
         if (!inp){
