@@ -29,7 +29,7 @@
         else if (isNumeric(inp)){
             for (let i = 0; i < table.length; i++) {
                 if (table[i]['studentCardNumber']==inp){
-                    youtop_div.innerHTML='ТЫ ТОП '+(i+1)+' РЭЗИ';
+                    youtop_div.innerHTML=funNames[table[i]['studentCardNumber']]+' ТОП '+(i+1)+' РЭЗИ';
                     found=true;
                     {break;}
                 }
@@ -61,8 +61,7 @@
 <br>Номер студака или фамилия
 <form name="who">
     <input type="text" name="key"></input>
-    <input type="button" id="Button" name="send" value="Отправить" onclick="topFunc(document.who.key.value)">
-    <button class="button-49" role="button" onclick="topFunc(document.who.key.value)">УЗНАТЬ</button>
+    <input class="button-49" type="button" id="Button" name="send" value="Отправить" onclick="topFunc(document.who.key.value)">
 </form>
 
 <br><br>
